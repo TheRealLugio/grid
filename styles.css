@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #2b031a;
+    
+    font-family: Arial, sans-serif;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+
+  }
+  
+  .card {
+    perspective: 1000px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+
+  .card-inner {
+    position: relative;
+    width: 100px;
+    height: 160px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover .card-inner {
+    transform: scale(1.1);
+  }
+
+  .card:active .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-front{
+    background-image: linear-gradient(130deg, rgba(244, 202, 15, 0.911), rgba(215, 217, 204, 0.753), rgba(244, 202, 15, 0.911));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-front img{
+    width: 90%;
+    height: 90%;
+    border-radius: 8px;
+  }
+
+  .card-back {
+    background-color: #e6e3e3c5;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    font-size: 3.5em;
+  }
+
+  /* colors here 
+  .top-left{
+    background-color: rgba(26, 126, 159, 0.703);
+  }
+  .top-center {
+    background-color: rgba(65, 119, 65, 0.801);
+  }
+  .top-right {
+    background-color: rgba(239, 235, 5, 0.868);
+  }
+  .middle-left {
+    background-color: rgb(238, 84, 84);
+  }
+  .middle-center {
+    background-color: #eb60a1;
+  }
+  .middle-right {
+    background-color: #157d5ee7;
+  }
+  .bottom-left {
+    background-color: rgb(122, 91, 122);
+  }
+  .bottom-center {
+    background-color: #54d4a3;
+  }
+  .bottom-right {
+    background-color: #54bb37;
+  }
+  */
+
+  /* add animate vertical flip of card on click*/
+  /* add a design for back of card */
+  /* add an image for front of card */
